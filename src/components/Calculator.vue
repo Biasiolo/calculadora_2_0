@@ -105,7 +105,7 @@ body {
     padding: 8px;
     border-radius: 5px;
     text-align: right;
-    height: 6.5rem;
+    height: 6.2rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
 }
 
