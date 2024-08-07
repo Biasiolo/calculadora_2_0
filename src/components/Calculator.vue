@@ -1,5 +1,5 @@
 <template>
-    <div class="container rounded mt-2">
+    <div class="container mt-2">
         <div class="card bg-dark mx-auto" style="max-width: 400px;">
             <div class="card-body text-white fw-4">
                 <h2 class="card-title text-center">Calculadora</h2>
@@ -30,8 +30,10 @@
                     <button class="btn btn-light" @click="addToEquation('3')">3</button>
                     <button class="btn btn-primary" @click="calculate">=</button>
 
-                    <button class="btn btn-light" style="flex-grow: 2;" @click="addToEquation('0')">0</button>
+                    <button class="btn btn-light"  @click="addToEquation('0')">0</button>
                     <button class="btn btn-light" @click="addToEquation('.')">.</button>
+                    <button class="btn btn-success" style="grid-column: span 2;" @click="storeResult">Enter</button>
+                    <a href="https://github.com/Biasiolo/calculadora_2_0" class="btn btn-dark" target="_blank" style="grid-column: span 4;">Sobre</a>
                 </div>
             </div>
         </div>
@@ -64,6 +66,12 @@ export default {
                 this.result = 'Erro';
             }
         },
+        storeResult() {
+            if (this.result !== '') {
+                this.equation = this.result.toString();
+                this.result = '';
+            }
+        },
     },
 };
 </script>
@@ -87,7 +95,7 @@ export default {
     font-size: 1.5em;
     background-color: #333;
     color: #0f0;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
     text-align: right;
     height: 6rem;
@@ -101,7 +109,8 @@ export default {
 }
 
 button {
-    padding: 20px;
+    padding: 16px;
     font-size: 1.2em;
+    width:100%;
 }
 </style>
