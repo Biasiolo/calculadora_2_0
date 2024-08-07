@@ -95,14 +95,14 @@ export default {
 .display {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
-    background-color: rgba(155, 155, 155, 0.6); /* Transparência para efeito de vidro */
-    backdrop-filter: blur(10px); /* Blur para simular vidro */
+    background-color: rgba(155, 155, 155, 0.6); 
+    backdrop-filter: blur(10px); 
     color: #0f0;
     padding: 8px;
     border-radius: 5px;
     text-align: right;
     height: 6rem;
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra para simular luz */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
 }
 
 .calculator-buttons {
