@@ -1,8 +1,8 @@
 <template>
     <div class="container mt-2">
-        <div class="card bg-dark mx-auto" style="max-width: 400px;">
+        <div class="card mx-auto" style="max-width: 400px;">
             <div class="card-body text-white fw-4">
-                <h2 class="card-title text-center">Calculadora</h2>
+                <h2 class="card-title text-center text-success">RB-420C</h2>
                 <div class="mb-3 text-center">
                     <div class="display bg-secondary p-2 rounded">
                         <h3 class="text-monospace">{{ equation || '0' }}</h3>
@@ -61,7 +61,8 @@ export default {
         },
         calculate() {
             try {
-                this.result = eval(this.equation.replace(/×/g, '*').replace(/÷/g, '/'));
+                const evaluation = eval(this.equation.replace(/×/g, '*').replace(/÷/g, '/'));
+                this.result = parseFloat(evaluation.toFixed(10));
             } catch (error) {
                 this.result = 'Erro';
             }
@@ -78,7 +79,7 @@ export default {
 
 <style scoped>
 .container {
-    background-color: rgb(6, 0, 63);
+    background-color: rgb(250, 72, 2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,17 +89,20 @@ export default {
 .card {
     width: 100%;
     height: auto;
+    background-color: rgb(16, 6, 39);
 }
 
 .display {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5em;
-    background-color: #333;
+    background-color: rgba(155, 155, 155, 0.6); /* Transparência para efeito de vidro */
+    backdrop-filter: blur(10px); /* Blur para simular vidro */
     color: #0f0;
     padding: 8px;
     border-radius: 5px;
     text-align: right;
     height: 6rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Sombra para simular luz */
 }
 
 .calculator-buttons {
