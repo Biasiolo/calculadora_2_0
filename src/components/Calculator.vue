@@ -2,9 +2,9 @@
     <div class="container mt-2">
         <div class="card mx-auto" style="max-width: 400px;">
             <div class="card-body text-white fw-4">
-                <h2 class="card-title text-center text-success">RB-420C</h2>
+                <h1 class="card-title text-center text-success">RB-420C</h1>
                 <div class="mb-3 text-center">
-                    <div class="display bg-secondary p-2 rounded">
+                    <div class="display p-2 rounded">
                         <h3 class="text-monospace">{{ equation || '0' }}</h3>
                         <h2 class="text-monospace">{{ result }}</h2>
                     </div>
@@ -78,8 +78,12 @@ export default {
 </script>
 
 <style scoped>
+
+body {
+    background-color: #0f0;
+}
 .container {
-    background-color: rgb(250, 72, 2);
+    background-color: rgb(195, 253, 181);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,15 +98,22 @@ export default {
 
 .display {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5em;
-    background-color: rgba(155, 155, 155, 0.6); 
+    font-size: 1.6em;
+    background-color: rgba(108, 142, 158, 0.7); 
     backdrop-filter: blur(10px); 
     color: #0f0;
     padding: 8px;
     border-radius: 5px;
     text-align: right;
-    height: 6rem;
+    height: 6.2rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
+}
+
+h3 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 2.3rem;
 }
 
 .calculator-buttons {
