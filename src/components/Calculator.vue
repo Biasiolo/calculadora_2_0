@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="calculator-buttons">
-                    <button class="btn btn-light" @click="clear">C</button>
+                    <button class="btn btn-danger" @click="clear">C</button>
                     <button class="btn btn-light" @click="deleteLast">DEL</button>
                     <button class="btn btn-light" @click="addToEquation('/')">÷</button>
                     <button class="btn btn-light" @click="addToEquation('*')">×</button>
