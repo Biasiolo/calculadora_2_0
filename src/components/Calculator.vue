@@ -1,0 +1,107 @@
+<template>
+    <div class="container rounded mt-2">
+        <div class="card bg-dark mx-auto" style="max-width: 400px;">
+            <div class="card-body text-white fw-4">
+                <h2 class="card-title text-center">Calculadora</h2>
+                <div class="mb-3 text-center">
+                    <div class="display bg-secondary p-2 rounded">
+                        <h3 class="text-monospace">{{ equation || '0' }}</h3>
+                        <h2 class="text-monospace">{{ result }}</h2>
+                    </div>
+                </div>
+                <div class="calculator-buttons">
+                    <button class="btn btn-light" @click="clear">C</button>
+                    <button class="btn btn-light" @click="deleteLast">DEL</button>
+                    <button class="btn btn-light" @click="addToEquation('/')">÷</button>
+                    <button class="btn btn-light" @click="addToEquation('*')">×</button>
+
+                    <button class="btn btn-light" @click="addToEquation('7')">7</button>
+                    <button class="btn btn-light" @click="addToEquation('8')">8</button>
+                    <button class="btn btn-light" @click="addToEquation('9')">9</button>
+                    <button class="btn btn-light" @click="addToEquation('-')">-</button>
+
+                    <button class="btn btn-light" @click="addToEquation('4')">4</button>
+                    <button class="btn btn-light" @click="addToEquation('5')">5</button>
+                    <button class="btn btn-light" @click="addToEquation('6')">6</button>
+                    <button class="btn btn-light" @click="addToEquation('+')">+</button>
+
+                    <button class="btn btn-light" @click="addToEquation('1')">1</button>
+                    <button class="btn btn-light" @click="addToEquation('2')">2</button>
+                    <button class="btn btn-light" @click="addToEquation('3')">3</button>
+                    <button class="btn btn-primary" @click="calculate">=</button>
+
+                    <button class="btn btn-light" style="flex-grow: 2;" @click="addToEquation('0')">0</button>
+                    <button class="btn btn-light" @click="addToEquation('.')">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            equation: '',
+            result: '',
+        };
+    },
+    methods: {
+        addToEquation(input) {
+            this.equation += input;
+        },
+        clear() {
+            this.equation = '';
+            this.result = '';
+        },
+        deleteLast() {
+            this.equation = this.equation.slice(0, -1);
+        },
+        calculate() {
+            try {
+                this.result = eval(this.equation.replace(/×/g, '*').replace(/÷/g, '/'));
+            } catch (error) {
+                this.result = 'Erro';
+            }
+        },
+    },
+};
+</script>
+
+<style scoped>
+.container {
+    background-color: rgb(6, 0, 63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 97vh;
+}
+
+.card {
+    width: 100%;
+    height: auto;
+}
+
+.display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    background-color: #333;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right;
+    height: 6rem;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    font-weight: 600;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.2em;
+}
+</style>
