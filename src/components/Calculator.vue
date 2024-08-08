@@ -93,7 +93,7 @@ body {
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(7, 4, 34);
+    background-color: rgb(1, 0, 32);
 }
 
 .display {
@@ -132,5 +132,6 @@ button {
     width:100%;
     border: 2px solid rgb(15, 15, 15);
     border-bottom: 1px solid rgb(73, 73, 73);
+    border-left: 1px solid rgb(73, 73, 73);
 }
 </style>
