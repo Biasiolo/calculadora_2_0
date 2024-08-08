@@ -87,13 +87,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 97vh;
+    height: 98vh;
 }
 
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(16, 6, 39);
+    background-color: rgb(7, 4, 34);
 }
 
 .display {
@@ -123,11 +123,14 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     font-weight: 600;
+    
 }
 
 button {
     padding: 16px;
     font-size: 1.2em;
     width:100%;
+    border: 2px solid rgb(15, 15, 15);
+    border-bottom: 1px solid rgb(73, 73, 73);
 }
 </style>
