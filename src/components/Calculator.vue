@@ -107,6 +107,8 @@ body {
     text-align: right;
     height: 6.2rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
+    border: 3px solid rgb(15, 15, 15);
+    border-bottom: 2px solid rgb(73, 73, 73);
 }
 
 h3 {
