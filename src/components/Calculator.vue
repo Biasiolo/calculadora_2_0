@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         addToEquation(input) {
-            if (this.equation.length < 15) {
+            if (this.equation.length < 16) {
                 this.equation += input;
             }
         },
@@ -105,13 +105,21 @@ export default {
     padding: 8px;
     border-radius: 5px;
     text-align: right;
-    height: 6rem;
+    height: 6.3rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
     border: 3px solid rgb(15, 15, 15);
     border-bottom: 2px solid rgb(73, 73, 73);
     white-space: nowrap; 
     overflow: hidden; 
     text-overflow: ellipsis; 
+    align-items: center;
+}
+
+h1 {
+    text-shadow: 0 0 6px rgba(82, 82, 82, 0.5); 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 h3 {
