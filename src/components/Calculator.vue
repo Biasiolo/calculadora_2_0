@@ -134,7 +134,7 @@ button {
     font-size: 1.2em;
     width:100%;
     border: 2px solid rgb(15, 15, 15);
-    border-bottom: 1px solid rgb(73, 73, 73);
-    border-left: 1px solid rgb(73, 73, 73);
+    border-bottom: 1px solid rgb(15, 15, 15);
+    border-left: 1px solid rgb(15, 15, 15);
 }
 </style>
