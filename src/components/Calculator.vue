@@ -116,7 +116,7 @@ export default {
 }
 
 h1 {
-    text-shadow: 0 0 6px rgba(82, 82, 82, 0.5); 
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6); 
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     font-weight: 500;
