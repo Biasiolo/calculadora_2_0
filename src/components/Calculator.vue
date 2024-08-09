@@ -94,7 +94,7 @@ body {
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(1, 0, 43);
+    background-color: rgb(52, 52, 66);
     border: 3px solid rgb(15, 15, 15);
 }
 
