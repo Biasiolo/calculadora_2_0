@@ -80,9 +80,7 @@ export default {
 </script>
 <style scoped>
 
-body {
-    background-color: #0f0;
-}
+
 .container {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -111,9 +109,9 @@ body {
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
     border: 3px solid rgb(15, 15, 15);
     border-bottom: 2px solid rgb(73, 73, 73);
-    white-space: nowrap; /* Impede a quebra de linha */
-    overflow: hidden; /* Esconde o texto que ultrapassa o limite */
-    text-overflow: ellipsis; /* Adiciona reticências no texto que ultrapassa */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 }
 
 h3 {
