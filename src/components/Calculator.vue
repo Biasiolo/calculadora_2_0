@@ -92,7 +92,7 @@ export default {
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(52, 52, 66);
+    background-color: rgb(37, 37, 44);
     border: 3px solid rgb(15, 15, 15);
 }
 
