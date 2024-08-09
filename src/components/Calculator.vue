@@ -50,7 +50,9 @@ export default {
     },
     methods: {
         addToEquation(input) {
-            this.equation += input;
+            if (this.equation.length < 15) {
+                this.equation += input;
+            }
         },
         clear() {
             this.equation = '';
@@ -62,7 +64,7 @@ export default {
         calculate() {
             try {
                 const evaluation = eval(this.equation.replace(/×/g, '*').replace(/÷/g, '/'));
-                this.result = parseFloat(evaluation.toFixed(10));
+                this.result = parseFloat(evaluation.toFixed(4));
             } catch (error) {
                 this.result = 'Erro';
             }
@@ -76,14 +78,13 @@ export default {
     },
 };
 </script>
-
 <style scoped>
 
 body {
     background-color: #0f0;
 }
 .container {
-    background-color: rgb(195, 253, 181);
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +94,8 @@ body {
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(1, 0, 32);
+    background-color: rgb(1, 0, 43);
+    border: 3px solid rgb(15, 15, 15);
 }
 
 .display {
@@ -105,10 +107,13 @@ body {
     padding: 8px;
     border-radius: 5px;
     text-align: right;
-    height: 6.2rem;
+    height: 6rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
     border: 3px solid rgb(15, 15, 15);
     border-bottom: 2px solid rgb(73, 73, 73);
+    white-space: nowrap; /* Impede a quebra de linha */
+    overflow: hidden; /* Esconde o texto que ultrapassa o limite */
+    text-overflow: ellipsis; /* Adiciona reticências no texto que ultrapassa */
 }
 
 h3 {
