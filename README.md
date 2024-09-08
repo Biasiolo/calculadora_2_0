@@ -111,6 +111,3 @@ Contribuições são bem-vindas! Para contribuir, siga estas etapas:
 
 Este projeto está licenciado sob a licença MIT.
 
----
-
-Este **README** agora reflete o uso do Vite no ambiente de desenvolvimento, bem como as instruções ajustadas para instalação e execução.
