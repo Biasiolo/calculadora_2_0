@@ -82,7 +82,9 @@ export default {
 
 
 .container {
-    background-color: rgb(255, 255, 255);
+    background-image: url(../assets/images/mesa.png);
+
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,14 +94,15 @@ export default {
 .card {
     width: 100%;
     height: auto;
-    background-color: rgb(23, 23, 26);
-    border: 3px solid rgb(15, 15, 15);
+    background-color: #2d2d2d;
+    border: 3px solid #222222;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .display {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.6em;
-    background-color: rgba(108, 142, 158, 0.7); 
+    background-color: rgba(139, 175, 192, 0.7); 
     backdrop-filter: blur(10px); 
     color: #0f0;
     padding: 8px;
@@ -107,7 +110,7 @@ export default {
     text-align: right;
     height: 6.3rem;
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.5); 
-    border: 3px solid rgb(15, 15, 15);
+    border: 3px solid #222222;
     border-bottom: 2px solid rgb(73, 73, 73);
     white-space: nowrap; 
     overflow: hidden; 
@@ -116,7 +119,7 @@ export default {
 }
 
 h1 {
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6); 
+    text-shadow: 0 0 6px #222222;; 
     font-family: 'Courier New', Courier, monospace;
     font-size: 2rem;
     font-weight: 500;
@@ -141,8 +144,8 @@ button {
     padding: 16px;
     font-size: 1.2em;
     width:100%;
-    border: 2px solid rgb(15, 15, 15);
-    border-bottom: 1px solid rgb(15, 15, 15);
-    border-left: 1px solid rgb(15, 15, 15);
+    border: 2px solid #222222;
+    border-bottom: 1px solid #222222;
+    border-left: 1px solid #222222;
 }
 </style>
